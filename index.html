@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="profile-img" id="profile-img">
+                <img src="sabahat2.jfif" alt="Profile Image">
+            </div>
+        </div>
+        <div class="right">
+            <form id="resume-form">
+                <div class="heading">Personal Info</div>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <div class="heading">Skills</div>
+                <div class="skills-section">
+                    <div class="skills-checkbox">
+                        <input type="checkbox" id="skill-1"> JavaScript
+                        <input type="checkbox" id="skill-2"> HTML
+                        <input type="checkbox" id="skill-3"> CSS
+                    </div>
+                </div>
+                <div class="heading">Gender</div>
+                <div class="gender-section">
+                    <div class="gender-radio">
+                        <input type="radio" name="gender" id="male"> Male
+                        <input type="radio" name="gender" id="female"> Female
+                    </div>
+                </div>
+                <div class="heading">Experience</div>
+                <input type="text" id="experience" placeholder="Work Experience" required>
+                <button type="button" id="generate-resume">Generate Resume</button>
+            </form>
+            <div id="resume-output" style="display: none;">
+                <h2>Generated Resume</h2>
+                <div id="resume-content">
+                    <div class="editable-section" contenteditable="true" id="resume-name">Name: </div>
+                    <div class="editable-section" contenteditable="true" id="resume-email">Email: </div>
+                    <div class="editable-section" contenteditable="true" id="resume-phone">Phone: </div>
+                    <div class="editable-section" contenteditable="true" id="resume-skills">Skills: </div>
+                    <div class="editable-section" contenteditable="true" id="resume-gender">Gender: </div>
+                    <div class="editable-section" contenteditable="true" id="resume-experience">Experience: </div>
+                </div>
+                <div class="button-container">
+                    <button id="download-resume">Download Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
